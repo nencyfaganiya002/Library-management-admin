@@ -1,0 +1,43 @@
+<%- include('header'); -%>
+<%- include('dashcontainer'); -%>
+
+<br><br><br><br><br><br>
+<div class="w3-content" style="max-width: 1100px;">
+    <div>
+      <div class="panel panel-info">
+        <div class="panel-heading">		  	  
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class=" col-md-9 col-lg-9 "> 
+              <table class="table table-user-information">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Author Name:</th>
+                    </tr>
+                    <%
+                    if(data.length!=0){
+                    var i=1;
+                    data.forEach(function(data){
+                    %>
+				  <tr>
+                    <td></td>
+                    <td><%=data.authorname%></td>
+                  </tr>
+                  <%  i++; }) %>
+                  <% } else{ %>
+                  <tr>
+                      <td colspan="7">No Data Found</td>
+                  </tr>
+              <% } %>
+                </tbody>
+                
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+<br><br>
+<%- include('footer'); -%>
